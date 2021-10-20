@@ -1,0 +1,20 @@
+<section>
+  <h2>Article {{articleID}} <a routerLink="/articles/{{ articleID }}/edit">Edit</a></h2>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet blandit nibh non cursus. Vivamus tempus vehicula augue.
+    Proin ac diam a sem consequat luctus. Quisque est tortor, pharetra a odio et, molestie posuere est. Proin odio risus,
+    efficitur nec ipsum et, semper sollicitudin ipsum. Sed condimentum gravida enim eget elementum. Duis eget lacus ac urna
+    vestibulum aliquam.
+  </p>
+  <router-outlet></router-outlet>
+</section>
+<nav>
+  <ul>
+    <li *ngIf="articleID > 1">
+      <a routerLink="/articles/{{ articleID - 1 }}">Go to article {{ articleID - 1 }} </a>
+    </li>
+    <li>
+      <a routerLink="/articles/{{ articleID + 1 }}">Go to article {{ articleID + 1 }} </a>
+    </li>
+  </ul>
+</nav>

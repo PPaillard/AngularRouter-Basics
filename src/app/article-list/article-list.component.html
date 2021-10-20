@@ -1,0 +1,9 @@
+<h2>Latest articles</h2>
+<ul>
+  <li *ngFor="let id of articleIDs">
+      <a routerLink="/articles/{{id}}">Article {{ id }}</a>
+      <!-- OR 
+      <a [routerLink]="['/articles', id]">Article {{id}}</a>
+      -->
+  </li>
+</ul>
